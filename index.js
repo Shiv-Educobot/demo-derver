@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/', (req, res) => {
     console.log("Server is running");
-    res.send('Hello from Server');
+    res.send('Smart Car');
 })
 
 app.get('/forward', (req, res) => {
@@ -19,7 +19,10 @@ app.get('/backward', (req, res) => {
 
 app.get('/left', (req, res) => {
     console.log("left");
-    res.send("left");
+    setTimeout(() => {
+        res.send("left");
+    }, 10000)
+
 })
 
 app.get('/right', (req, res) => {
@@ -44,5 +47,5 @@ app.get("/rightTurn", (req, res) => {
 
 
 app.listen(80, () => {
-    console.log(`Server is running http://${ip.address()}`);
+    console.log(`Server is running http://192.168.43.81`);
 })
