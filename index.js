@@ -22,12 +22,13 @@ app.get('/left', (req, res) => {
     setTimeout(() => {
         res.send("left");
     }, 10000)
-
 })
 
 app.get('/right', (req, res) => {
     console.log("right");
-    res.send("right");
+    setTimeout(() => {
+        res.send("right");
+    }, 10000)
 })
 
 app.get('/stop', (req, res) => {
